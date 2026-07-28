@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ventilator-ai-backend
+    env: docker
+    dockerfilePath: ./Dockerfile.backend
+    region: ohio
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 8000
